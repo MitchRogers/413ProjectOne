@@ -16,17 +16,19 @@
           <label>Tour time:</label>
           <!--Have time selected from SignUp page here-->
           <br />
-          <label asp-for="groupName">Name of group:</label><!--required-->
-          <input type="text" asp-for="groupName" />
+          <label asp-for="GroupName">Name of group:</label><!--required-->
+          <input type="text" asp-for="GroupName" />
           <br />
-          <label asp-for="groupSize">Size of group:</label><!--required-->
-          <input asp-for="groupSize" type="number" />
+          <label asp-for="GroupSize">Size of group:</label><!--required-->
+          <input asp-for="GroupSize" type="number" />
           <br />
-          <label asp-for="email">Email address:</label><!--required-->
-          <input asp-for="email" type="email" />
+          <label asp-for="Email">Email address:</label><!--required-->
+          <input asp-for="Email" type="email" />
           <br />
-          <label asp-for="phoneNum">Phone number:</label><!--optional-->
-          <input asp-for="phoneNum" type="tel" />
+          <label asp-for="PhoneNumber">Phone number:</label><!--optional-->
+          <input asp-for="PhoneNumber" type="tel" />
           <br />
           <button type="submit">Book tour</button>
       </form>
+
+<!--After submitting, user should be taken to home page-->

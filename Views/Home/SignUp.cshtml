@@ -1,7 +1,36 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<TimeSlots>  <!--available time slot model here in <>-->
 <!--This view will be the Sign Up page. It will display the available
     times and allow users to select a time.-->
+
+<!--Loop that shows the table with available times-->
+<!--Show -->
+
+<h3>Available tour time slots:</h3>
+<br /><br />
+<p>Please select an available time slot below.</p>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th class="text-center">Time</th>
+            <th class="text-center">Scheduling</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td class="text-center">@x.TimeSlots.Time</td>
+                <td class="text-center">
+                    <!--Copied from Assignment 8 for the remove button- To be used as schedule button and take the user to the Form.cshtml-->
+                    <!--Change all these values -->
+                    <form asp-page-handler="Remove" method="post">
+                        <input type="hidden" name="BookId" value="@line.Project.BookId" />
+                        <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
