@@ -19,7 +19,10 @@ namespace ProjectOne.Models
             }
 
             //SignUp info is set to the context
+            //TimeSlots is also set to the context 
+            //we can get at both the tables now.
             public IQueryable<SignUp> SignUp => _context.SignUp;
+            public IQueryable<TimeSlots> TimeSlots => _context.TimeSlots;
         }
     }
 }

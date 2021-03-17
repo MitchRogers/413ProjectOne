@@ -11,12 +11,18 @@ namespace ProjectOne.Models
     public class TimeSlots
     {
        //where do these two tables connect!
+       [Key]
+       [Required]
+       public int TimeSlotId { get; set; }
 
         [Required]
-        public DateTime Time { get; set; }
+        public string Time { get; set; }
 
         //this default value is true so the button for signup will be open
         [Required]
         public bool IsAvailable { get; set; } = true;
+
+        [Required]
+        public string Day { get; set; }
     }
 }

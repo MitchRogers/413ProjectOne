@@ -17,6 +17,9 @@ namespace ProjectOne.Models
 
         //create a set of the SignUp information so it can be displayed
         public DbSet<SignUp> SignUp { get; set; }
+
+        //Not sure if this is needed but just in case
+        public DbSet<TimeSlots> TimeSlots { get; set; }
     }
 }
-}
+

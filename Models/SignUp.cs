@@ -11,7 +11,7 @@ namespace ProjectOne.Models
         //primary key
         [Key]
         [Required]
-        public string GroupId { get; set; }
+        public int GroupId { get; set; }
 
         [Required]
         public string GroupName { get; set; }
