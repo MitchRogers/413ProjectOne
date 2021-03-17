@@ -8,5 +8,7 @@ namespace ProjectOne.Models
     public interface ISignUpRepository
     {
         IQueryable<SignUp> SignUp { get; }
+
+        IQueryable<TimeSlots>TimeSlots { get; }
     }
 }

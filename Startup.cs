@@ -31,7 +31,7 @@ namespace ProjectOne
             services.AddDbContext<SignUpDbContext>(options =>
             {
                 //this still has an error
-                options.UseSqlite(Configuration["ConnectionStrings:SignUpConnection"]);
+                options.UseSqlite(Configuration["ConnectionStrings:ProjectOneDBConnection"]);
             });
         }
 
@@ -61,6 +61,8 @@ namespace ProjectOne
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            SeedDataTime.EnsurePopulated(app);
         }
     }
 }
