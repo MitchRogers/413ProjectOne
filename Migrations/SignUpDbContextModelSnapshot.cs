@@ -46,6 +46,10 @@ namespace ProjectOne.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Day")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<bool>("IsAvailable")
                         .HasColumnType("INTEGER");
 

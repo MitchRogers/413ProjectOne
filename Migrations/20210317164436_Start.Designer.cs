@@ -8,7 +8,7 @@ using ProjectOne.Models;
 namespace ProjectOne.Migrations
 {
     [DbContext(typeof(SignUpDbContext))]
-    [Migration("20210317063745_Start")]
+    [Migration("20210317164436_Start")]
     partial class Start
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,6 +47,10 @@ namespace ProjectOne.Migrations
                     b.Property<int>("TimeSlotId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Day")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("IsAvailable")
                         .HasColumnType("INTEGER");

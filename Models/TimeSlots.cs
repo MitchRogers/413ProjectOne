@@ -21,5 +21,8 @@ namespace ProjectOne.Models
         //this default value is true so the button for signup will be open
         [Required]
         public bool IsAvailable { get; set; } = true;
+
+        [Required]
+        public string Day { get; set; }
     }
 }

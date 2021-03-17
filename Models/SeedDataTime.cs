@@ -29,81 +29,548 @@ namespace ProjectOne.Models
                     new TimeSlots
                     {
                         Time = "8:00 am",
-                        IsAvailable = true
+                        IsAvailable = true,
+                        Day = "Monday"
                     },
 
                      new TimeSlots
                      {
                          Time = "9:00 am",
-                         IsAvailable = true
+                         IsAvailable = true,
+                         Day = "Monday"
                      },
 
                       new TimeSlots
                       {
                           Time = "10:00 am",
-                          IsAvailable = true
+                          IsAvailable = true,
+                          Day = "Monday"
                       },
 
                        new TimeSlots
                        {
                            Time = "11:00 am",
-                           IsAvailable = true
+                           IsAvailable = true,
+                           Day = "Monday"
                        },
 
                         new TimeSlots
                         {
                             Time = "12:00 pm",
-                            IsAvailable = true
+                            IsAvailable = true,
+                            Day = "Monday"
                         },
 
                          new TimeSlots
                          {
                              Time = "1:00 pm",
-                             IsAvailable = true
+                             IsAvailable = true,
+                             Day = "Monday"
                          },
 
                           new TimeSlots
                           {
                               Time = "2:00 pm",
-                              IsAvailable = true
+                              IsAvailable = true,
+                              Day = "Monday"
                           },
 
                            new TimeSlots
                            {
                                Time = "3:00 pm",
-                               IsAvailable = true
+                               IsAvailable = true,
+                               Day = "Monday"
                            },
 
                             new TimeSlots
                             {
                                 Time = "4:00 pm",
-                                IsAvailable = true
+                                IsAvailable = true,
+                                Day = "Monday"
                             },
 
                              new TimeSlots
                              {
                                  Time = "5:00 pm",
-                                 IsAvailable = true
+                                 IsAvailable = true,
+                                 Day = "Monday"
                              },
 
                               new TimeSlots
                               {
                                   Time = "6:00 pm",
-                                  IsAvailable = true
+                                  IsAvailable = true,
+                                  Day = "Monday"
                               },
 
                                new TimeSlots
                                {
                                    Time = "7:00 pm",
-                                   IsAvailable = true
+                                   IsAvailable = true,
+                                   Day = "Monday"
                                },
 
                                 new TimeSlots
                                 {
                                     Time = "8:00 pm",
-                                    IsAvailable = true
-                                }
+                                    IsAvailable = true,
+                                    Day = "Monday"
+                                },
+                               //start of tuesday
+                               new TimeSlots
+                               {
+                                   Time = "8:00 am",
+                                   IsAvailable = true,
+                                   Day = "Tuesday"
+                               },
 
+                     new TimeSlots
+                     {
+                         Time = "9:00 am",
+                         IsAvailable = true,
+                         Day = "Tuesday"
+                     },
+
+                      new TimeSlots
+                      {
+                          Time = "10:00 am",
+                          IsAvailable = true,
+                          Day = "Tuesday"
+                      },
+
+                       new TimeSlots
+                       {
+                           Time = "11:00 am",
+                           IsAvailable = true,
+                           Day = "Tuesday"
+                       },
+
+                        new TimeSlots
+                        {
+                            Time = "12:00 pm",
+                            IsAvailable = true,
+                            Day = "Tuesday"
+                        },
+
+                         new TimeSlots
+                         {
+                             Time = "1:00 pm",
+                             IsAvailable = true,
+                             Day = "Tuesday"
+                         },
+
+                          new TimeSlots
+                          {
+                              Time = "2:00 pm",
+                              IsAvailable = true,
+                              Day = "Tuesday"
+                          },
+
+                           new TimeSlots
+                           {
+                               Time = "3:00 pm",
+                               IsAvailable = true,
+                               Day = "Tuesday"
+                           },
+
+                            new TimeSlots
+                            {
+                                Time = "4:00 pm",
+                                IsAvailable = true,
+                                Day = "Tuesday"
+                            },
+
+                             new TimeSlots
+                             {
+                                 Time = "5:00 pm",
+                                 IsAvailable = true,
+                                 Day = "Tuesday"
+                             },
+
+                              new TimeSlots
+                              {
+                                  Time = "6:00 pm",
+                                  IsAvailable = true,
+                                  Day = "Tuesday"
+                              },
+
+                               new TimeSlots
+                               {
+                                   Time = "7:00 pm",
+                                   IsAvailable = true,
+                                   Day = "Tuesday"
+                               },
+
+                                new TimeSlots
+                                {
+                                    Time = "8:00 pm",
+                                    IsAvailable = true,
+                                    Day = "Tuesday"
+                                },
+                                //start of wednesday
+                                new TimeSlots
+                                {
+                                    Time = "8:00 am",
+                                    IsAvailable = true,
+                                    Day = "Wednesday"
+                                },
+
+                     new TimeSlots
+                     {
+                         Time = "9:00 am",
+                         IsAvailable = true,
+                         Day = "Wednesday"
+                     },
+
+                      new TimeSlots
+                      {
+                          Time = "10:00 am",
+                          IsAvailable = true,
+                          Day = "Wednesday"
+                      },
+
+                       new TimeSlots
+                       {
+                           Time = "11:00 am",
+                           IsAvailable = true,
+                           Day = "Wednesday"
+                       },
+
+                        new TimeSlots
+                        {
+                            Time = "12:00 pm",
+                            IsAvailable = true,
+                            Day = "Wednesday"
+                        },
+
+                         new TimeSlots
+                         {
+                             Time = "1:00 pm",
+                             IsAvailable = true,
+                             Day = "Wednesday"
+                         },
+
+                          new TimeSlots
+                          {
+                              Time = "2:00 pm",
+                              IsAvailable = true,
+                              Day = "Wednesday"
+                          },
+
+                           new TimeSlots
+                           {
+                               Time = "3:00 pm",
+                               IsAvailable = true,
+                               Day = "Wednesday"
+                           },
+
+                            new TimeSlots
+                            {
+                                Time = "4:00 pm",
+                                IsAvailable = true,
+                                Day = "Wednesday"
+                            },
+
+                             new TimeSlots
+                             {
+                                 Time = "5:00 pm",
+                                 IsAvailable = true,
+                                 Day = "Wednesday"
+                             },
+
+                              new TimeSlots
+                              {
+                                  Time = "6:00 pm",
+                                  IsAvailable = true,
+                                  Day = "Wednesday"
+                              },
+
+                               new TimeSlots
+                               {
+                                   Time = "7:00 pm",
+                                   IsAvailable = true,
+                                   Day = "Wednesday"
+                               },
+
+                                new TimeSlots
+                                {
+                                    Time = "8:00 pm",
+                                    IsAvailable = true,
+                                    Day = "Wednesday"
+                                },
+                                //thursday
+                                new TimeSlots
+                                {
+                                    Time = "8:00 am",
+                                    IsAvailable = true,
+                                    Day = "Thursday"
+                                },
+
+                     new TimeSlots
+                     {
+                         Time = "9:00 am",
+                         IsAvailable = true,
+                         Day = "Thursday"
+                     },
+
+                      new TimeSlots
+                      {
+                          Time = "10:00 am",
+                          IsAvailable = true,
+                          Day = "Thursday"
+                      },
+
+                       new TimeSlots
+                       {
+                           Time = "11:00 am",
+                           IsAvailable = true,
+                           Day = "Thursday"
+                       },
+
+                        new TimeSlots
+                        {
+                            Time = "12:00 pm",
+                            IsAvailable = true,
+                            Day = "Thursday"
+                        },
+
+                         new TimeSlots
+                         {
+                             Time = "1:00 pm",
+                             IsAvailable = true,
+                             Day = "Thursday"
+                         },
+
+                          new TimeSlots
+                          {
+                              Time = "2:00 pm",
+                              IsAvailable = true,
+                              Day = "Thursday"
+                          },
+
+                           new TimeSlots
+                           {
+                               Time = "3:00 pm",
+                               IsAvailable = true,
+                               Day = "Thursday"
+                           },
+
+                            new TimeSlots
+                            {
+                                Time = "4:00 pm",
+                                IsAvailable = true,
+                                Day = "Thursday"
+                            },
+
+                             new TimeSlots
+                             {
+                                 Time = "5:00 pm",
+                                 IsAvailable = true,
+                                 Day = "Thursday"
+                             },
+
+                              new TimeSlots
+                              {
+                                  Time = "6:00 pm",
+                                  IsAvailable = true,
+                                  Day = "Thursday"
+                              },
+
+                               new TimeSlots
+                               {
+                                   Time = "7:00 pm",
+                                   IsAvailable = true,
+                                   Day = "Thursday"
+                               },
+
+                                new TimeSlots
+                                {
+                                    Time = "8:00 pm",
+                                    IsAvailable = true,
+                                    Day = "Thursday"
+                                },
+                                //friday
+                                new TimeSlots
+                                {
+                                    Time = "8:00 am",
+                                    IsAvailable = true,
+                                    Day = "Friday"
+                                },
+
+                     new TimeSlots
+                     {
+                         Time = "9:00 am",
+                         IsAvailable = true,
+                         Day = "Friday"
+                     },
+
+                      new TimeSlots
+                      {
+                          Time = "10:00 am",
+                          IsAvailable = true,
+                          Day = "Friday"
+                      },
+
+                       new TimeSlots
+                       {
+                           Time = "11:00 am",
+                           IsAvailable = true,
+                           Day = "Friday"
+                       },
+
+                        new TimeSlots
+                        {
+                            Time = "12:00 pm",
+                            IsAvailable = true,
+                            Day = "Friday"
+                        },
+
+                         new TimeSlots
+                         {
+                             Time = "1:00 pm",
+                             IsAvailable = true,
+                             Day = "Friday"
+                         },
+
+                          new TimeSlots
+                          {
+                              Time = "2:00 pm",
+                              IsAvailable = true,
+                              Day = "Friday"
+                          },
+
+                           new TimeSlots
+                           {
+                               Time = "3:00 pm",
+                               IsAvailable = true,
+                               Day = "Friday"
+                           },
+
+                            new TimeSlots
+                            {
+                                Time = "4:00 pm",
+                                IsAvailable = true,
+                                Day = "Friday"
+                            },
+
+                             new TimeSlots
+                             {
+                                 Time = "5:00 pm",
+                                 IsAvailable = true,
+                                 Day = "Friday"
+                             },
+
+                              new TimeSlots
+                              {
+                                  Time = "6:00 pm",
+                                  IsAvailable = true,
+                                  Day = "Friday"
+                              },
+
+                               new TimeSlots
+                               {
+                                   Time = "7:00 pm",
+                                   IsAvailable = true,
+                                   Day = "Friday"
+                               },
+
+                                new TimeSlots
+                                {
+                                    Time = "8:00 pm",
+                                    IsAvailable = true,
+                                    Day = "Friday"
+                                },
+                                //saturday
+                                new TimeSlots
+                                {
+                                    Time = "8:00 am",
+                                    IsAvailable = true,
+                                    Day = "Saturday"
+                                },
+
+                     new TimeSlots
+                     {
+                         Time = "9:00 am",
+                         IsAvailable = true,
+                         Day = "Saturday"
+                     },
+
+                      new TimeSlots
+                      {
+                          Time = "10:00 am",
+                          IsAvailable = true,
+                          Day = "Saturday"
+                      },
+
+                       new TimeSlots
+                       {
+                           Time = "11:00 am",
+                           IsAvailable = true,
+                           Day = "Saturday"
+                       },
+
+                        new TimeSlots
+                        {
+                            Time = "12:00 pm",
+                            IsAvailable = true,
+                            Day = "Saturday"
+                        },
+
+                         new TimeSlots
+                         {
+                             Time = "1:00 pm",
+                             IsAvailable = true,
+                             Day = "Saturday"
+                         },
+
+                          new TimeSlots
+                          {
+                              Time = "2:00 pm",
+                              IsAvailable = true,
+                              Day = "Saturday"
+                          },
+
+                           new TimeSlots
+                           {
+                               Time = "3:00 pm",
+                               IsAvailable = true,
+                               Day = "Saturday"
+                           },
+
+                            new TimeSlots
+                            {
+                                Time = "4:00 pm",
+                                IsAvailable = true,
+                                Day = "Saturday"
+                            },
+
+                             new TimeSlots
+                             {
+                                 Time = "5:00 pm",
+                                 IsAvailable = true,
+                                 Day = "Saturday"
+                             },
+
+                              new TimeSlots
+                              {
+                                  Time = "6:00 pm",
+                                  IsAvailable = true,
+                                  Day = "Saturday"
+                              },
+
+                               new TimeSlots
+                               {
+                                   Time = "7:00 pm",
+                                   IsAvailable = true,
+                                   Day = "Saturday"
+                               },
+
+                                new TimeSlots
+                                {
+                                    Time = "8:00 pm",
+                                    IsAvailable = true,
+                                    Day = "Saturday"
+                                }
                     ) ;
                 context.SaveChanges();
             }

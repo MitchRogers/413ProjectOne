@@ -29,7 +29,8 @@ namespace ProjectOne.Migrations
                     TimeSlotId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Time = table.Column<string>(type: "TEXT", nullable: false),
-                    IsAvailable = table.Column<bool>(type: "INTEGER", nullable: false)
+                    IsAvailable = table.Column<bool>(type: "INTEGER", nullable: false),
+                    Day = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
