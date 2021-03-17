@@ -61,7 +61,7 @@ namespace ProjectOne.Controllers
         public IActionResult ViewAppointment()
         {   
             
-            return View();
+            return View(context.SignUp);
         }
 
         public IActionResult Privacy()
