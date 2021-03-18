@@ -74,8 +74,18 @@ namespace ProjectOne.Controllers
 
         //Connects to database and shows the appointments that are scheduled.
         public IActionResult ViewAppointment()
-        {   
-            
+        {
+            List<string> AppointmentList = new List<string>();
+
+            foreach (var x in context.TimeSlots)
+            {
+                if (x.AppointmentId != null)
+                {
+                    var y = context.SignUp.Where(a => a.AppointmentId == x.AppointmentId).FirstOrDefault();
+
+                    AppointmentList.Add($"Group Name: {y.GroupName} Group Size: {y.GroupSize} Day: {x.Day} Time: {x.Time} Contact: {y.Email} Phone:  {y.PhoneNumber}");
+                }
+            }
             return View(context.SignUp);
         }
 
