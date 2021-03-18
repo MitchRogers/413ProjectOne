@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Confirmed Appointments";
+}
+
+@model IEnumerable<SignUp>
+
+<div style="margin: 0 10%;">
+    <br />
+    <h1>Confirmed appointments for the upcoming week</h1>
+    <br /><br />
+          <table class="table table-bordered table-striped table-hover">
+              <caption>Confirmed Appointments</caption>
+              <tr style="background-color: rgb(180,180,180)">
+                  <th>Weekday</th>
+                  <th>Time</th>
+                  <th>Group Name</th>
+                  <th>Group Size</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+              </tr>
+              <tr>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+              </tr>
+              <tr>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+              </tr>
+              <tr>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+              </tr>
+              <tr>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+                  <td>a</td>
+              </tr>
+              @foreach (var x in Model)
+              {
+                  <tr>
+                      <td>XX/XX/XXXX</td>
+                      <td>XX:XX:XX </td>
+                      <td>@x.GroupName</td>
+                      <td>@x.GroupSize</td>
+                      <td>@x.Email</td>
+                      <td>@x.PhoneNumber</td>
+                  </tr>
+              }
+          </table>
+</div>
+
+
+
+<!--
+        foreach (var x in Model)
+    {
+        <tr>
+            <td>XX/XX/XXXX</td>
+            <td>XX:XX:XX </td>
+            <td>x.GroupName</td>
+            <td>x.GroupSize</td>
+            <td>x.Email</td>
+        </tr>
+    }
+    -->

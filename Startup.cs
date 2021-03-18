@@ -59,7 +59,8 @@ namespace ProjectOne
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}",
+                    new { controller = "Home", action = "Index" });
             });
 
             SeedDataTime.EnsurePopulated(app);
