@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjectOne.Models;
+using ProjectOne.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -31,7 +32,15 @@ namespace ProjectOne.Controllers
         //Show the times where people can sign up to attend
         public IActionResult SignUp()
         {
-            return View();
+            return View(new WeekdayViewModel
+            {
+                Monday = context.TimeSlots.Where(x => x.Day == "Monday" && x.IsAvailable == true),
+                Tuesday = context.TimeSlots.Where(x => x.Day == "Tuesday" && x.IsAvailable == true),
+                Wednesday = context.TimeSlots.Where(x => x.Day == "Wednesday" && x.IsAvailable == true),
+                Thursday = context.TimeSlots.Where(x => x.Day == "Thursday" && x.IsAvailable == true),
+                Friday = context.TimeSlots.Where(x => x.Day == "Friday" && x.IsAvailable == true),
+                Saturday = context.TimeSlots.Where(x => x.Day == "Saturday" && x.IsAvailable == true)
+            });
         }
 
         //when the form is requested, this will display the correct page
