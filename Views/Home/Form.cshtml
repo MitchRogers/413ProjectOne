@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!--This is the Form view. The view will allow the user
+    to sign up for an appointment.-->
+
+<p>We are excited for you to join us! Please fill out the following information for your tour.</p>
+<br />
+<br />
+
+<!--Form for user to fill out information-->
+<form>
+    <!--Dropdown list of available time slots-->
+    <label>Tour date:</label>
+    <!--Have date selected from SignUp page here-->
+    <label>Tour time:</label>
+    <!--Have time selected from SignUp page here-->
+    <br />
+    <label asp-for="GroupName">Name of group:</label><!--required-->
+    <input type="text" asp-for="GroupName" />
+    <br />
+    <label asp-for="GroupSize">Size of group:</label><!--required-->
+    <input asp-for="GroupSize" type="number" />
+    <br />
+    <label asp-for="Email">Email address:</label><!--required-->
+    <input asp-for="Email" type="email" />
+    <br />
+    <label asp-for="PhoneNumber">Phone number:</label><!--optional-->
+    <input asp-for="PhoneNumber" type="tel" />
+    <br />
+    <button type="submit">Book tour</button>
+</form>
+
+<!--After submitting, user should be taken to home page-->
+<!--If time, add user confirmation page for tour booking-->
