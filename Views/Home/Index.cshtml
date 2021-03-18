@@ -2,29 +2,38 @@
     ViewData["Title"] = "Home Page";
 }
 
-<img src="~/img/LaytonTemple.jpg" />
-<p>Layton Utah Temple 1500 E Oak Hills Drive, Layton, UT 84040</p>
-<!--Basic Info About Tour-->
+<style>a:hover {text-decoration: none;} p {font-size: 15px;} .instr {font-size: 14px;}</style>
 
-<p>PLEASE SIGN-UP FOR SUNDAY TOURS ONLY.  WE WILL SOON HAVE A NEW SCHEDULE SINCE WE HAVE BEEN ASKED TO STOP ALL OUTSIDE TOURS. Please review the available slots ON SUNDAY ONLY and click on the button to sign up. Use the "quantity" field to let us know how many people will be in your group. Thank you!</p>
+<div class="row">
+    <div class="col-8">
+        <img src="~/img/LaytonTemple.jpg" style="height: 85%;"/>
+    </div>
 
-<p>General Tour Instructions:</p>
-<ul>
-    <li>Masks are required.</li>
-    <li>Park on Rosewood (west side of the temple) and meet at the Visitors Center trailer.</li>
-    <li>Dress casual, except on Sunday</li>
-    <li>Spanish-speaking tours are available on Thursday, Friday, Saturday or Sunday</li>
-</ul>
+    <div class="col-4" style="padding-right: 60px;">
+        <!--Basic Info About Tour-->
+        <br />
+        <p>PLEASE SIGN-UP FOR SUNDAY TOURS ONLY.  WE WILL SOON HAVE A NEW SCHEDULE SINCE WE HAVE BEEN ASKED TO STOP ALL OUTSIDE TOURS. Please review the available slots ON SUNDAY ONLY and click on the button to sign up. Use the "quantity" field to let us know how many people will be in your group. Thank you!</p>
+        
+        <p>General Tour Instructions:</p>
+        <ul style="list-style: none;">
+            <li class="instr">Masks are required.</li>
+            <li class="instr">Park on Rosewood (west side of the temple) and meet at the Visitors Center trailer.</li>
+            <li class="instr">Dress casual, except on Sunday</li>
+            <li class="instr">Spanish-speaking tours are available on Thursday, Friday, Saturday or Sunday</li>
+        </ul>
+        <br />
 
-
-<p>Available Tours:</p>
-<ul>
-    <li>Tour (Outdoor): We have been asked to discontinue outside tours at this time.</li>
-    <li> Trailer Tour: All tours will be inside the trailer. Masks are required</li>
-</ul>
-
-<!--Put an asp-for tag when the page is built-->
-<button>View Available Time Slots</button>
-
-
-<!--Put this in a footer that spans the whole website: Please call 801-628-4488 or email LaytonTempleTours@gmail.com with questions or special requests.-->
+        <!--<p>Available Tours:</p>
+            <ul>
+                <li>Tour (Outdoor): We have been asked to discontinue outside tours at this time.</li>
+                <li> Trailer Tour: All tours will be inside the trailer. Masks are required</li>
+            </ul>-->
+        <div class="text-center">
+            <a href="Home/SignUp" style="margin: 5px; padding: 10px; border: none; border-radius: 10px; background-color: #697cc7; color: white;">Create Appointment</a>
+            <a asp-controller="Home" asp-action="ViewAppointment" style="margin: 5px; padding: 10px; border: none; border-radius: 10px; background-color: #697cc7; color: white;">View Appointments</a>
+        </div>
+        <br /><br />
+        <p class="text-center" style="font-size: 12px;">Layton Utah Temple <br />1500 E Oak Hills Drive, <br />Layton, UT 84040</></p>
+        <p class="text-center" style="font-size: 12px;">801-789-5432  |  laytonutah@ldstemples.com</p>
+    </div>
+</div>

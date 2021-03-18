@@ -52,9 +52,7 @@ namespace ProjectOne.Controllers
                 return View("Confirmation", formRes);
             }
 
-            return View();
-
-            
+            return View();            
         }
 
         //Connects to database and shows the appointments that are scheduled.
