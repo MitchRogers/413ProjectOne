@@ -79,12 +79,12 @@ namespace ProjectOne.Controllers
 
             foreach (var x in context.TimeSlots)
             {
-                if (x.TimeSlotId != null)
-                {
+                
+                
                     var y = context.SignUp.Where(a => a.TimeSlotId == x.TimeSlotId).FirstOrDefault();
 
                     AppointmentList.Add($"Group Name: {y.GroupName} Group Size: {y.GroupSize} Day: {x.Day} Time: {x.Time} Contact: {y.Email} Phone:  {y.PhoneNumber}");
-                }
+                
             }
             return View(AppointmentList);
         }
