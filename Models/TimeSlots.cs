@@ -13,7 +13,7 @@ namespace ProjectOne.Models
        //where do these two tables connect!
        [Key]
        [Required]
-       public int TimeSlotId { get; set; }
+       public int AppointmentId { get; set; }
 
         [Required]
         public string Time { get; set; }

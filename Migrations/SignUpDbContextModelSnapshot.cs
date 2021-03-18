@@ -17,7 +17,7 @@ namespace ProjectOne.Migrations
 
             modelBuilder.Entity("ProjectOne.Models.SignUp", b =>
                 {
-                    b.Property<int>("GroupId")
+                    b.Property<int>("AppointmentId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -35,14 +35,14 @@ namespace ProjectOne.Migrations
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("GroupId");
+                    b.HasKey("AppointmentId");
 
                     b.ToTable("SignUp");
                 });
 
             modelBuilder.Entity("ProjectOne.Models.TimeSlots", b =>
                 {
-                    b.Property<int>("TimeSlotId")
+                    b.Property<int>("AppointmentId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -57,7 +57,7 @@ namespace ProjectOne.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("TimeSlotId");
+                    b.HasKey("AppointmentId");
 
                     b.ToTable("TimeSlots");
                 });

@@ -10,7 +10,7 @@ namespace ProjectOne.Migrations
                 name: "SignUp",
                 columns: table => new
                 {
-                    GroupId = table.Column<int>(type: "INTEGER", nullable: false)
+                    AppointmentId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     GroupName = table.Column<string>(type: "TEXT", nullable: false),
                     GroupSize = table.Column<int>(type: "INTEGER", nullable: false),
@@ -19,14 +19,14 @@ namespace ProjectOne.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SignUp", x => x.GroupId);
+                    table.PrimaryKey("PK_SignUp", x => x.AppointmentId);
                 });
 
             migrationBuilder.CreateTable(
                 name: "TimeSlots",
                 columns: table => new
                 {
-                    TimeSlotId = table.Column<int>(type: "INTEGER", nullable: false)
+                    AppointmentId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Time = table.Column<string>(type: "TEXT", nullable: false),
                     IsAvailable = table.Column<bool>(type: "INTEGER", nullable: false),
@@ -34,7 +34,7 @@ namespace ProjectOne.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TimeSlots", x => x.TimeSlotId);
+                    table.PrimaryKey("PK_TimeSlots", x => x.AppointmentId);
                 });
         }
 
