@@ -11,7 +11,7 @@ namespace ProjectOne.Models
         //primary key
         [Key]
         [Required]
-        public int AppointmentId { get; set; }
+        public int TimeSlotId { get; set; }
 
         [Required]
         public string GroupName { get; set; }

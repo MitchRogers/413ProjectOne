@@ -45,9 +45,9 @@ namespace ProjectOne.Controllers
         }
 
         [HttpPost]
-        public IActionResult SignUp(int appointmentId)
+        public IActionResult SignUp(int TimeSlotId)
         {
-            TimeSlots appointment = context.TimeSlots.Where(t => t.AppointmentId == appointmentId).FirstOrDefault();
+            TimeSlots appointment = context.TimeSlots.Where(t => t.TimeSlotId == TimeSlotId).FirstOrDefault();
             ViewBag.TimeSlot = appointment;
             return View("Form");
         }
@@ -79,9 +79,9 @@ namespace ProjectOne.Controllers
 
             foreach (var x in context.TimeSlots)
             {
-                if (x.AppointmentId != null)
+                if (x.TimeSlotId != null)
                 {
-                    var y = context.SignUp.Where(a => a.AppointmentId == x.AppointmentId).FirstOrDefault();
+                    var y = context.SignUp.Where(a => a.TimeSlotId == x.TimeSlotId).FirstOrDefault();
 
                     AppointmentList.Add($"Group Name: {y.GroupName} Group Size: {y.GroupSize} Day: {x.Day} Time: {x.Time} Contact: {y.Email} Phone:  {y.PhoneNumber}");
                 }
