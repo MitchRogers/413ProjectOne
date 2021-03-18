@@ -8,8 +8,10 @@
     <br />
     <h1>Confirmed appointments for the upcoming week</h1>
     <br /><br />
+    <!-- using our enumerable model to iterate through appointments that have been set -->
     <div class="list-group">
         <ul>
+            <!-- for loop to access and display all the set appointments from the Signup model -->
             @foreach (string r in Model)
             {
                 <li class="list-group-item">@r</li>
