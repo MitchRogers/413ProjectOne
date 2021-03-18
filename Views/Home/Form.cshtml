@@ -11,17 +11,13 @@
 <p>We are excited for you to join us! Please fill out the following information for your tour.</p>
 <br />
 <br />
+<p>Your tour date: @ViewBag.TimeSlot.Day, @ViewBag.TimeSlot.Time.</p>
 
 <!--Form for user to fill out information-->
 <form>
-    <!--Dropdown list of available time slots-->
-    <label>Tour date:</label>
-    <input />
-    <label>Tour time:</label>
-    <input />
-    <br />
     <label asp-for="GroupName">Name of group:</label><!--required-->
     <input type="text" asp-for="GroupName" />
+    <input type="hidden" name="TimeSlotId" value ="@ViewBag.TimeSlot.TimeSlotId" />
     <br />
     <label asp-for="GroupSize">Size of group:</label><!--required-->
     <input asp-for="GroupSize" type="number" />

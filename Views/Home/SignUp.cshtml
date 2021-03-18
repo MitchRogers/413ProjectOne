@@ -8,10 +8,7 @@
     <br /><br />
     <p>Please select an available time slot below.</p>
 
-    @*@using (Html.BeginForm("Form", "Home"))
-    {
-    <input type="submit" value="Schedule a tour" />
-    }*@
+    
     <a asp-action="Form" asp-controller="Home" >Schedule a tour</a>
 
 
@@ -20,6 +17,7 @@
             <tr>
                 <th class="text-center">Day</th>
                 <th class="text-center">Time</th>
+                <th class="text-center">Schedule</th>
             </tr>
         </thead>
         <tbody>
@@ -33,6 +31,13 @@
                     <tr>
                         <td class="text-center">@x.Day</td>
                         <td class="text-center">@x.Time</td>
+                        <td>
+                            <!--Copy and paste this into all days-->
+                            <form method="post" asp-action="AppointmentView??">
+                                <input type="hidden" name="TimeSlotId" value="@x.AppointmentId" />
+                                <button type="submit" class="btn-success btn-small">Schedule tour</button>
+                            </form>
+                        </td>
                     </tr>
                     
                 }
