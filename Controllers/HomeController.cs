@@ -30,9 +30,10 @@ namespace ProjectOne.Controllers
         }
 
         //Show the times where people can sign up to attend
+        [HttpGet]
         public IActionResult SignUp()
         {
-            return View(new WeekdayViewModel
+            return View(new AppointmentsViewModel
             {
                 Monday = context.TimeSlots.Where(x => x.Day == "Monday" && x.IsAvailable == true),
                 Tuesday = context.TimeSlots.Where(x => x.Day == "Tuesday" && x.IsAvailable == true),
@@ -43,6 +44,13 @@ namespace ProjectOne.Controllers
             });
         }
 
+        [HttpPost]
+        public IActionResult SignUp(int appointmentId)
+        {
+            TimeSlots appointment = context.TimeSlots.Where(t => t.AppointmentId == appointmentId).FirstOrDefault();
+            ViewBag.TimeSlot = appointment;
+            return View("Form");
+        }
         //when the form is requested, this will display the correct page
         [HttpGet]
         public IActionResult Form()
