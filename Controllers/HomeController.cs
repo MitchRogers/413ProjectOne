@@ -77,13 +77,14 @@ namespace ProjectOne.Controllers
         {
             List<string> AppointmentList = new List<string>();
 
-            foreach (var x in context.TimeSlots)
+            foreach (var x in context.SignUp)
             {
 
+                var y = context.TimeSlots.Where(a => a.TimeSlotId == x.TimeSlotId).FirstOrDefault();
 
-                var y = context.SignUp.Where(a => a.TimeSlotId == x.TimeSlotId).FirstOrDefault();
-
-                AppointmentList.Add(string.Format($"Group Name: {y.GroupName} Group Size: {y.GroupSize} Day: {x.Day} Time: {x.Time} Contact: {y.Email} Phone:  {y.PhoneNumber}"));
+                AppointmentList.Add(string.Format($"Group Name: {x.GroupName} // Group Size: {x.GroupSize} // Day: {y.Day} // Time: {y.Time} // Contact: {x.Email} // Phone:  {x.PhoneNumber}"));
+                y.IsAvailable = false;
+                context.SaveChanges();
 
             }
             return View(AppointmentList);

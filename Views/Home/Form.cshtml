@@ -14,10 +14,10 @@
 <p>Your tour date: @ViewBag.TimeSlot.Day, @ViewBag.TimeSlot.Time.</p>
 
 <!--Form for user to fill out information-->
-<form>
+<form method="post" asp-action="Form">
     <label asp-for="GroupName">Name of group:</label><!--required-->
     <input type="text" asp-for="GroupName" />
-    <input type="hidden" name="TimeSlotId" value ="@ViewBag.TimeSlot.TimeSlotId" />
+    <input type="hidden" name="TimeSlotId" asp-for="TimeSlotId" value ="@ViewBag.TimeSlot.TimeSlotId" />
     <br />
     <label asp-for="GroupSize">Size of group:</label><!--required-->
     <input asp-for="GroupSize" type="number" />
@@ -29,6 +29,7 @@
     <input asp-for="PhoneNumber" type="tel" />
     <br />
     <button type="submit">Book tour</button>
+    <div asp-validation-summary="All"></div>
 </form>
 
 <!--After submitting, user should be taken to home page-->
