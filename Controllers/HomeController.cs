@@ -15,21 +15,23 @@ namespace ProjectOne.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        //creating an attribute that allows us to store and reference our DbContext
         private SignUpDbContext context;
 
+        //brining in the variable and intializing it in the constructor
         public HomeController(ILogger<HomeController> logger, SignUpDbContext con)
         {
             _logger = logger;
             context = con;
         }
 
-        //Shows the Home Page view
+        //Shows the Index Page view
         public IActionResult Index()
         {
             return View();
         }
 
-        //Show the times where people can sign up to attend
+        //Show the times where people can sign up to attend seperated by Day, and if the appointment is available.
         [HttpGet]
         public IActionResult SignUp()
         {
@@ -44,13 +46,18 @@ namespace ProjectOne.Controllers
             });
         }
 
+        //Creating an instance of a TimeSlot, and passing it in when posted.
         [HttpPost]
         public IActionResult SignUp(int TimeSlotId)
         {
+            //creating a variable to pass through the ViewBag, this will allow us to pass the Time Slot information directly into the form.
             TimeSlots appointment = context.TimeSlots.Where(t => t.TimeSlotId == TimeSlotId).FirstOrDefault();
             ViewBag.TimeSlot = appointment;
+            
+            //directs the page to the Form view.
             return View("Form");
         }
+
         //when the form is requested, this will display the correct page
         [HttpGet]
         public IActionResult Form()
@@ -62,28 +69,39 @@ namespace ProjectOne.Controllers
         [HttpPost]
         public IActionResult Form(SignUp formRes)
         {
+            //checks to see if the model is valid before chaning the database
             if (ModelState.IsValid)
             {
                 context.SignUp.Add(formRes);
                 context.SaveChanges();
+                
+                //if true, returns the index page after saving database
                 return View("Index", formRes);
             }
 
+            //if model is not valid, it will just return the same view, but show the errors on the form.
             return View();            
         }
 
         //Connects to database and shows the appointments that are scheduled.
         public IActionResult ViewAppointment()
         {
+            //creating a list of AppointmentList that will allow us to display the data on our page.
             List<string> AppointmentList = new List<string>();
 
+            //looping through all of the SignUp instnaces so we can display all of the tours in the database
             foreach (var x in context.SignUp)
             {
-
+                //declaring a variable for TimeSlot that allows us to reference the correct TimeSlotId, and get the information in that model
                 var y = context.TimeSlots.Where(a => a.TimeSlotId == x.TimeSlotId).FirstOrDefault();
 
+                //A dynamic string that displays the information on our page
                 AppointmentList.Add(string.Format($"Group Name: {x.GroupName} // Group Size: {x.GroupSize} // Day: {y.Day} // Time: {y.Time} // Contact: {x.Email} // Phone:  {x.PhoneNumber}"));
+                
+                //changing the IsAvailable attribute to false so that this specific appointment will no longer appear on our Schedule Tours Page
                 y.IsAvailable = false;
+                
+                //Saves the Database.
                 context.SaveChanges();
 
             }
