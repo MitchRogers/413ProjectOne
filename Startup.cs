@@ -30,7 +30,7 @@ namespace ProjectOne
             //passing in the configuration for accessing the database
             services.AddDbContext<SignUpDbContext>(options =>
             {
-                //this still has an error
+                
                 options.UseSqlite(Configuration["ConnectionStrings:ProjectOneDBConnection"]);
             });
         }
@@ -63,6 +63,7 @@ namespace ProjectOne
                     new { controller = "Home", action = "Index" });
             });
 
+            //This will populate the database with our hardcoded tour times.
             SeedDataTime.EnsurePopulated(app);
         }
     }
