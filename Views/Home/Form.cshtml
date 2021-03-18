@@ -1,23 +1,21 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!--This is the Form view. The view will allow the user to sign up for an appointment.-->
 
+<!--Pull in the Signup model-->
 @model ProjectOne.Models.SignUp
-<!--This is the Form view. The view will allow the user
-    to sign up for an appointment.-->
+
 
 <p>We are excited for you to join us! Please fill out the following information for your tour.</p>
 <br />
-<br />
+<br 
+<!--Display the day and time the user selected from the SignUp view that was passed throught the ViewBag-->
 <p>Your tour date: @ViewBag.TimeSlot.Day, @ViewBag.TimeSlot.Time.</p>
 
 <!--Form for user to fill out information-->
 <form method="post" asp-action="Form">
     <label asp-for="GroupName">Name of group:</label><!--required-->
     <input type="text" asp-for="GroupName" />
-    <input type="hidden" name="TimeSlotId" asp-for="TimeSlotId" value ="@ViewBag.TimeSlot.TimeSlotId" />
+    <!--Passes the day and time selected by the user-->
+    <input type="hidden" name="TimeSlotId" asp-for="TimeSlotId" value="@ViewBag.TimeSlot.TimeSlotId" />
     <br />
     <label asp-for="GroupSize">Size of group:</label><!--required-->
     <input asp-for="GroupSize" type="number" />
@@ -29,8 +27,7 @@
     <input asp-for="PhoneNumber" type="tel" />
     <br />
     <button type="submit">Book tour</button>
+    <!--Passes information to the database-->
     <div asp-validation-summary="All"></div>
 </form>
-
-<!--After submitting, user should be taken to home page-->
-<!--If time, add user confirmation page for tour booking-->
+<!--After the user books the tour, they are showed the appointment confirmation and can go back to the home page-->

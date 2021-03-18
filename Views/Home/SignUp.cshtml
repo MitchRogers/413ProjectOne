@@ -1,154 +1,146 @@
-﻿@model AppointmentsViewModel
-    <!--available time slot model here in-->
-    <!--This view will be the Sign Up page. It will display the available
-        times and allow users to select a time.-->
+﻿<!--This view will be the Sign Up page. It will display the available times and allow users to select a time.-->
 
+<!--Bring in the AppointmentsViewModel-->
+@model AppointmentsViewModel
 
-    <h3>Available tour time slots:</h3>
-    <br /><br />
-    <p>Please select an available time slot below.</p>
+<h3>Available tour time slots:</h3>
+<br />
+<br />
+<p>Please select an available time slot below.</p>
 
-    
-    <a asp-action="Form" asp-controller="Home" >Schedule a tour</a>
+<!--Create a table that will display the time slots where the IsAvailable variable == true. The table will sort by day (Monday-Friday
+    and have a button next to each time slot to schedule that specific day and time-->
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <!--Table header: Day | Time | Schedule-->
+            <th class="text-center">Day</th>
+            <th class="text-center">Time</th>
+            <th class="text-center">Schedule</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--Time slots for Monday. For loop will go through each seed data time and display it IF the IsAvailable ==true-->
+        @foreach (var x in Model.Monday)
+        {
 
+            if (x.IsAvailable == true)
 
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <th class="text-center">Day</th>
-                <th class="text-center">Time</th>
-                <th class="text-center">Schedule</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var x in Model.Monday)
             {
 
-                if (x.IsAvailable == true)
+                <tr>
+                    <td class="text-center">@x.Day</td>
+                    <td class="text-center">@x.Time</td>
+                    <td>
+                        <form method="post" asp-action="SignUp">
+                            <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
+                            <button type="submit" class="btn-success btn-small">Schedule tour</button>
+                        </form>
+                    </td>
+                </tr>
 
-                {
-
-                    <tr>
-                        <td class="text-center">@x.Day</td>
-                        <td class="text-center">@x.Time</td>
-                        <td>
-                            <!--Copy and paste this into all days-->
-                            <form method="post" asp-action="SignUp">
-                                <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
-                                <button type="submit" class="btn-success btn-small">Schedule tour</button>
-                            </form>
-                        </td>
-                    </tr>
-                    
-                }
             }
+        }
+        <!--Time slots for Tuesday. For loop will go through each seed data time and display it IF the IsAvailable ==true-->>
+        @foreach (var x in Model.Tuesday)
+        {
 
-            @foreach (var x in Model.Tuesday)
+            if (x.IsAvailable == true)
+
             {
 
-                if (x.IsAvailable == true)
+                <tr>
+                    <td class="text-center">@x.Day</td>
+                    <td class="text-center">@x.Time</td>
+                    <td>
+                        <form method="post" asp-action="SignUp">
+                            <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
+                            <button type="submit" class="btn-success btn-small">Schedule tour</button>
+                        </form>
+                    </td>
+                </tr>
 
-                {
-
-                    <tr>
-                        <td class="text-center">@x.Day</td>
-                        <td class="text-center">@x.Time</td>
-                         <td>
-                            <!--Copy and paste this into all days-->
-                            <form method="post" asp-action="SignUp">
-                                <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
-                                <button type="submit" class="btn-success btn-small">Schedule tour</button>
-                            </form>
-                        </td>
-                    </tr>
-
-                }
             }
+        }
+        <!--Time slots for Monday. For loop will go through each seed data time and display it IF the IsAvailable ==true-->
+        @foreach (var x in Model.Wednesday)
+        {
 
-            @foreach (var x in Model.Wednesday)
+            if (x.IsAvailable == true)
+
             {
 
-                if (x.IsAvailable == true)
-
-                {
-
-                    <tr>
-                        <td class="text-center">@x.Day</td>
-                        <td class="text-center">@x.Time</td>
-                         <td>
-                            <!--Copy and paste this into all days-->
-                            <form method="post" asp-action="SignUp">
-                                <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
-                                <button type="submit" class="btn-success btn-small">Schedule tour</button>
-                            </form>
-                        </td>
-                    </tr>
-                }
+                <tr>
+                    <td class="text-center">@x.Day</td>
+                    <td class="text-center">@x.Time</td>
+                    <td>
+                        <form method="post" asp-action="SignUp">
+                            <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
+                            <button type="submit" class="btn-success btn-small">Schedule tour</button>
+                        </form>
+                    </td>
+                </tr>
             }
+        }
+        <!--Time slots for Thursday. For loop will go through each seed data time and display it IF the IsAvailable ==true-->
+        @foreach (var x in Model.Thursday)
+        {
 
-            @foreach (var x in Model.Thursday)
+            if (x.IsAvailable == true)
+
             {
 
-                if (x.IsAvailable == true)
-
-                {
-
-                    <tr>
-                        <td class="text-center">@x.Day</td>
-                        <td class="text-center">@x.Time</td>
-                         <td>
-                            <!--Copy and paste this into all days-->
-                            <form method="post" asp-action="SignUp">
-                                <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
-                                <button type="submit" class="btn-success btn-small">Schedule tour</button>
-                            </form>
-                        </td>
-                    </tr>
-                }
+                <tr>
+                    <td class="text-center">@x.Day</td>
+                    <td class="text-center">@x.Time</td>
+                    <td>
+                        <form method="post" asp-action="SignUp">
+                            <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
+                            <button type="submit" class="btn-success btn-small">Schedule tour</button>
+                        </form>
+                    </td>
+                </tr>
             }
+        }
+        <!--Time slots for Friday. For loop will go through each seed data time and display it IF the IsAvailable ==true-->
+        @foreach (var x in Model.Friday)
+        {
 
-            @foreach (var x in Model.Friday)
+            if (x.IsAvailable == true)
+
             {
 
-                if (x.IsAvailable == true)
-
-                {
-
-                    <tr>
-                        <td class="text-center">@x.Day</td>
-                        <td class="text-center">@x.Time</td>
-                         <td>
-                            <!--Copy and paste this into all days-->
-                            <form method="post" asp-action="SignUp">
-                                <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
-                                <button type="submit" class="btn-success btn-small">Schedule tour</button>
-                            </form>
-                        </td>
-                    </tr>
-                }
+                <tr>
+                    <td class="text-center">@x.Day</td>
+                    <td class="text-center">@x.Time</td>
+                    <td>
+                        <form method="post" asp-action="SignUp">
+                            <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
+                            <button type="submit" class="btn-success btn-small">Schedule tour</button>
+                        </form>
+                    </td>
+                </tr>
             }
+        }
+        <!--Time slots for Saturday. For loop will go through each seed data time and display it IF the IsAvailable ==true-->
+        @foreach (var x in Model.Saturday)
+        {
 
-            @foreach (var x in Model.Saturday)
+            if (x.IsAvailable == true)
+
             {
 
-                if (x.IsAvailable == true)
-
-                {
-
-                    <tr>
-                        <td class="text-center">@x.Day</td>
-                        <td class="text-center">@x.Time</td>
-                         <td>
-                            <!--Copy and paste this into all days-->
-                            <form method="post" asp-action="SignUp">
-                                <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
-                                <button type="submit" class="btn-success btn-small">Schedule tour</button>
-                            </form>
-                        </td>
-                    </tr>
-                }
+                <tr>
+                    <td class="text-center">@x.Day</td>
+                    <td class="text-center">@x.Time</td>
+                    <td>
+                        <form method="post" asp-action="SignUp">
+                            <input type="hidden" name="TimeSlotId" value="@x.TimeSlotId" />
+                            <button type="submit" class="btn-success btn-small">Schedule tour</button>
+                        </form>
+                    </td>
+                </tr>
             }
-        </tbody>
-    </table>
-    <br /><br />
-    <a asp-action="Form" asp-controller="Home">Schedule a tour</a>
+        }
+    </tbody>
+</table>
