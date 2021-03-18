@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TimeSlots>  <!--available time slot model here in <>-->
+﻿@model IEnumerable<TimeSlots>  <!--available time slot model here in-->
 <!--This view will be the Sign Up page. It will display the available
     times and allow users to select a time.-->
 
@@ -12,6 +12,7 @@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
+            <th class="text-center">Day</th>
             <th class="text-center">Time</th>
             <th class="text-center">Scheduling</th>
         </tr>
@@ -20,8 +21,10 @@
         @foreach (var x in Model)
         {
             <tr>
+                <td class="text-center">@x.TimeSlots.Day</td>
                 <td class="text-center">@x.TimeSlots.Time</td>
                 <td class="text-center">
+
                     <!--Copied from Assignment 8 for the remove button- To be used as schedule button and take the user to the Form.cshtml-->
                     <!--Change all these values -->
                     <form asp-page-handler="Remove" method="post">
