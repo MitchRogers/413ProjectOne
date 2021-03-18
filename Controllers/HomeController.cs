@@ -86,7 +86,7 @@ namespace ProjectOne.Controllers
                     AppointmentList.Add($"Group Name: {y.GroupName} Group Size: {y.GroupSize} Day: {x.Day} Time: {x.Time} Contact: {y.Email} Phone:  {y.PhoneNumber}");
                 }
             }
-            return View(context.SignUp);
+            return View(AppointmentList);
         }
 
         public IActionResult Privacy()
