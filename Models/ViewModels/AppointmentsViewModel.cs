@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace ProjectOne.Models.ViewModels
 {
+    //make a view model to pull from both tables. Also made separators for the days.
     public class AppointmentsViewModel
     {
         public IEnumerable<SignUp> SignUp { get; set; }

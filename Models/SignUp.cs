@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectOne.Models
 {
+    //model for the user input form.
     public class SignUp
     {
         //primary key
