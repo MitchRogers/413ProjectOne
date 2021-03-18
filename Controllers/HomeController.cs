@@ -66,7 +66,7 @@ namespace ProjectOne.Controllers
             {
                 context.SignUp.Add(formRes);
                 context.SaveChanges();
-                return View("Confirmation", formRes);
+                return View("Index", formRes);
             }
 
             return View();            
