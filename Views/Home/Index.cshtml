@@ -1,10 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<!-- styling -->
 <style>a:hover {text-decoration: none;} p {font-size: 15px;} .instr {font-size: 14px;}</style>
 
 <div class="row">
+    <!-- picture of Layton Utah Temple -->
     <div class="col-8">
         <img src="~/img/LaytonTemple.jpg" style="height: 85%;"/>
     </div>
@@ -22,17 +23,13 @@
             <li class="instr">Spanish-speaking tours are available on Thursday, Friday, Saturday or Sunday</li>
         </ul>
         <br />
-
-        <!--<p>Available Tours:</p>
-            <ul>
-                <li>Tour (Outdoor): We have been asked to discontinue outside tours at this time.</li>
-                <li> Trailer Tour: All tours will be inside the trailer. Masks are required</li>
-            </ul>-->
+        <!-- buttons for user to either sign up for a tour or view existing scheduled tours -->
         <div class="text-center">
             <a asp-controller="Home" asp-action="SignUp" style="margin: 5px; padding: 10px; border: none; border-radius: 10px; background-color: #697cc7; color: white;">Schedule a Tour</a>
             <a asp-controller="Home" asp-action="ViewAppointment" style="margin: 5px; padding: 10px; border: none; border-radius: 10px; background-color: #697cc7; color: white;">View Appointments</a>
         </div>
         <br /><br />
+        <!-- act as footer information for church and temple -->
         <p class="text-center" style="font-size: 12px;">Layton Utah Temple <br />1500 E Oak Hills Drive, <br />Layton, UT 84040</></p>
         <p class="text-center" style="font-size: 12px;">801-789-5432  |  laytonutah@ldstemples.com</p>
     </div>
